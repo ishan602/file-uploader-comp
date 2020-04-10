@@ -6,29 +6,29 @@ function App() {
 
   function uploadImage(e) {
     e.preventDefault();
-    const data = new FormData();
-    const URL = 'http://localhost:3000/src/pics';
-    console.log(fileName);
-    data.append('image', fileName);
-    console.log(data);
-    axios
-      .post(URL, data)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log('not worked', err);
-      });
-    if (fileName !== '') {
-      console.log(fileName);
-    }
+    // const data = new FormData();
+    // const URL = 'http://localhost:3000/src/pics';
+    // console.log(fileName);
+    // data.append('image', fileName);
+    // console.log(data);
+    // axios
+    //   .post(URL, data)
+    //   .then((res) => {
+    //     console.log(res);
+    //   })
+    //   .catch((err) => {
+    //     console.log('not worked', err);
+    //   });
+    // if (fileName !== '') {
+    //   console.log(fileName);
+    // }
   }
   function validateFile(e) {
     const fullType = e.target.files[0].type.split('/');
     let type = fullType[1].toUpperCase();
     let size = e.target.files[0].size;
     console.log(type, size);
-    if ((type === 'JPEG' || 'PNG') && size <= 4000000) {
+    if (type === ('JPEG' || 'PNG') && size <= 4000000) {
       setFileName(e.target.files[0]);
     } else if (type === 'MP4' && size <= 20000000) {
       setFileName(e.target.files[0]);
@@ -47,7 +47,7 @@ function App() {
           console.log(Math.round(video.duration) + 's');
         });
         video.src = url;
-        console.log(video.src);
+        // console.log(video.src);
       };
       rd.readAsArrayBuffer(e.target.files[0]);
     } else {
