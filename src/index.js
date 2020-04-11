@@ -11,7 +11,7 @@ ReactDOM.render(
         labelClass: "",
         labelText: "",
         inputFieldClass: "",
-        aHiddenValue: false,
+        aHiddenValue: true,
         aRequiredValue: true,
         submitButtonText: ""
       }}

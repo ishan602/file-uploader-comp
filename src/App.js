@@ -67,8 +67,6 @@ function App(props) {
         aria-hidden={props.formDetails.aHiddenValue}
         aria-required={props.formDetails.aRequiredValue}
       />
-      <br />
-      <br />
       <button type='submit'>{submitButtonText}</button>
     </form>
   );

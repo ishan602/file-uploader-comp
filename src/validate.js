@@ -1,3 +1,5 @@
+// If Image we will check for type in the below function and the limit is 4Mb
+
 function validateImage(category, size) {
     if ((category === ("JPEG" || "PNG")) && (size <= 4000000)) {
         return "success";
@@ -6,6 +8,9 @@ function validateImage(category, size) {
         return "Not a proper format of image or size is too large";
     }
 }
+
+// If video we will check for type in the below function and the limit is 20Mb
+
 function validateVideo(type, category, size, e) {
     if ((category === "MP4") && size <= 20000000) {
         let rd = new FileReader();
@@ -29,6 +34,9 @@ function validateVideo(type, category, size, e) {
         return "Not a proper format or size is too large";
     }
 }
+
+// Validate File Input for the Image or Video
+
 export function validateFile(e) {
     const mimeType = e.target.files[0].type.split('/');
     let type = mimeType[0].toUpperCase();
