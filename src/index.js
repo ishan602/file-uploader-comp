@@ -6,7 +6,16 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App
+      formDetails={{
+        labelClass: "",
+        labelText: "",
+        inputFieldClass: "",
+        aHiddenValue: false,
+        aRequiredValue: true,
+        submitButtonText: ""
+      }}
+    />
   </React.StrictMode>,
   document.getElementById('root')
 );
